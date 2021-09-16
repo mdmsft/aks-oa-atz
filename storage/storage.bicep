@@ -5,6 +5,9 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   sku: {
     name: 'Premium_LRS'
   }
+  properties: {
+    allowBlobPublicAccess: false
+  }
 
   resource fileShare 'fileServices' = {
     name: 'default'
