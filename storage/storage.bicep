@@ -7,6 +7,7 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   }
   properties: {
     allowBlobPublicAccess: false
+    minimumTlsVersion: 'TLS1_2'
   }
 
   resource fileShare 'fileServices' = {
